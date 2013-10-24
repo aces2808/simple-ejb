@@ -10,13 +10,13 @@ import com.sample.ejb.service.EjbRemoteService;
 
 @Stateless(name = "EjbCalService")
 @Remote(EjbRemoteService.class)
-public class EjbCalService implements EjbRemoteService {
+public class EjbRemoteImpl implements EjbRemoteService {
 
-	private static final Logger logger = LoggerFactory.getLogger(EjbCalService.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(EjbRemoteImpl.class);
 
 	@Override
 	public float add(float a, float b) {
-		logger.debug("First parameter:: " + a + " second parameter:: " + b);
+		LOGGER.debug("First parameter:: " + a + " second parameter:: " + b);
 		return (a + b);
 	}
 
