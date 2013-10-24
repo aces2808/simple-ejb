@@ -12,4 +12,9 @@ public class EjbLocalImpl implements EjbLocalService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(EjbLocalImpl.class);
 
+	@Override
+	public void checkUser(String userName) {
+		LOGGER.debug("Checking user:: " + userName);
+	}
+
 }
